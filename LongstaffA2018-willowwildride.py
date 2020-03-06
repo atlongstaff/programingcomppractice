@@ -1,38 +1,21 @@
-import math
-
-
 data11 = open("DATA11.txt","r") 
 Totallist = data11.read()
-
 Totallist = Totallist.split("\n")
-
 TandN = Totallist[0]
-
 TandN = TandN.split(" ")
-T = TandN[0]
-N = TandN[1]
+T = int(TandN[0])
+N = int(TandN[1])
 boxage = 0
-
 newboxadded = False
 Totallist.pop(0)
 i=0
-
-
-while boxage > 0 or newboxadded == False:
-	try:
-		if Totallist[i] == "B" and i <= int(N):
-			boxage += int(T)
+while boxage > 0 or i < T or newboxadded == False:
+	if i <= T:
+		if Totallist[i] == "B":
+			boxage += T
 			newboxadded = True
-		elif newboxadded == True:
-			boxage -=1	
-	except:
-		print("test")
-		exit()
-	print(boxage)
-	i +=1
+	if newboxadded == True:
+		boxage -=1	
+	i +=1	
 
-
-print( i - int(N))
-
-
-
+print(max(0,i - N))
