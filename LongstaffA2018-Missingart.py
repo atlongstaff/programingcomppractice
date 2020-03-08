@@ -55,6 +55,7 @@ while len(Totallist) != 0:
 		newline = ''
 
 
+
 	for i in awnserseries:
 		try:
 			if i == newseries[newseries.index(i)]: #checks if theres a match
@@ -66,6 +67,3 @@ while len(Totallist) != 0:
 		print("MATCH")
 	else:
 		print("FAIL", str(failurelist).replace('[','').replace(']',''))
-
-
-

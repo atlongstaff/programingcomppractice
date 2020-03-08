@@ -10,7 +10,6 @@ while len(Totallist) != 0:
 	newboxadded = False
 	Totallist.pop(0)
 	iteration=0
-  
 	while boxage > 0 or iteration < T or newboxadded == False:
 		if iteration <= T:
 			if Totallist[iteration] == "B":
@@ -22,4 +21,3 @@ while len(Totallist) != 0:
 	print(max(0,iteration - N))
 	for x in range(N):
 	    Totallist.pop(0)
-
